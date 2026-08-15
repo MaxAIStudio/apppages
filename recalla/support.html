@@ -18,7 +18,7 @@
   <body>
     <p class="lang">Language: English | <a href="./support-zh.html">中文</a></p>
     <h1>Recalla Support</h1>
-    <p class="muted">Last updated: May 19, 2026</p>
+    <p class="muted">Last updated: August 15, 2026</p>
 
     <p>
       Recalla helps you remember the past, organize the present, and plan the future.
@@ -35,20 +35,20 @@
       <li>If you do not want auto-saving, switch to Chat Mode before sending.</li>
     </ul>
 
-    <h3>2) AI Mode, BYO Token, and Paid Subscription</h3>
+    <h3>2) OpenAI Parsing and Local Storage</h3>
     <ul>
-      <li><strong>Local Mode</strong> works without API keys, but extraction quality may be simpler.</li>
-      <li><strong>Bring Your Own Token</strong>: use your own provider/API key (OpenAI/Gemini/DeepSeek/OpenRouter). Provider fees are billed by that provider.</li>
-      <li><strong>Paid Subscription</strong>: unlock Recalla Pro AI service in-app (Monthly/Yearly), with platform-managed model fallback.</li>
-      <li>You can configure or switch modes in Settings &gt; AI Assistant.</li>
+      <li>Recalla uses OpenAI for AI-powered parsing, organization, and summarization when cloud AI is needed.</li>
+      <li>Your memories, reminders, categories, and most app data stay stored locally on your device by default.</li>
+      <li>Text, voice transcripts, images, and nearby context may be securely sent to OpenAI only for the parsing request you trigger.</li>
+      <li>Recalla does not keep those parsed contents stored long-term on its own servers.</li>
     </ul>
 
-    <h3>3) Subscription, Restore, Upgrade and Manage Plan</h3>
+    <h3>3) Monthly Subscription, Restore and Manage Plan</h3>
     <ul>
-      <li>Available plans: <strong>Monthly</strong> and <strong>Yearly</strong> (storefront price/currency may vary by region).</li>
+      <li>Recalla currently offers one <strong>Monthly</strong> plan for AI access.</li>
       <li>Tap <strong>Restore</strong> to recover an existing purchase on the same Apple account.</li>
-      <li>Upgrade/downgrade/cancel is handled by Apple via <strong>Manage Plan</strong> (Apple Subscriptions page).</li>
-      <li>When switching plans, effective time can be immediate or next renewal cycle based on Apple's subscription policy.</li>
+      <li>Cancellation and subscription management are handled by Apple via the App Store subscriptions page.</li>
+      <li>Price, storefront currency, renewal timing, and billing follow Apple's subscription system.</li>
     </ul>
 
     <h3>4) Voice Input and Language Recognition</h3>
@@ -75,8 +75,8 @@
     <h3>7) Attachments and Media</h3>
     <ul>
       <li>You can attach images and supported files to memory details.</li>
-      <li>Image text parsing can be toggled on/off before sending.</li>
-      <li>If parsing is off, files are still saved as attachments.</li>
+      <li>If you choose AI parsing, the selected image may be sent securely to OpenAI for analysis.</li>
+      <li>If you skip AI parsing, files can still be saved locally as attachments.</li>
     </ul>
 
     <h3>8) Data and Safety Notes</h3>
@@ -92,7 +92,7 @@
       <li>App version/build number.</li>
       <li>What happened vs expected behavior.</li>
       <li>Screenshots and the exact error text (if any).</li>
-      <li>If AI-related: provider, model name, and whether test connection passed.</li>
+      <li>If AI-related: whether the issue happened during text, voice, or image parsing.</li>
     </ul>
 
     <h2>Developer</h2>
