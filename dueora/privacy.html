@@ -29,17 +29,19 @@
       Saved items, important dates, categories, notes, reminder settings, confirmation timestamps,
       and attachment references are stored locally on your device using an app database.
       Attachments such as photos and PDFs remain as local files unless you choose to share, export,
-      or submit them for AI scanning.
+      or submit them for AI processing.
     </p>
 
     <h2>AI Scanning</h2>
     <p>
-      When you start AI-powered scanning, Dueora may securely send the selected photo, screenshot,
-      PDF page image, document content, filename, and related metadata to OpenAI to extract dates
-      and structured fields.
+      When you start AI-powered scanning or voice entry, Dueora may securely send the selected photos,
+      screenshots, PDF page images, document content, voice transcript, filename, and related metadata
+      to OpenAI to extract dates and structured fields.
     </p>
     <ul>
-      <li>For multi-page PDFs, Dueora asks you to choose one page and scans only that page.</li>
+      <li>For multi-page PDFs, Dueora asks you to choose which pages to scan and sends only those selected pages.</li>
+      <li>A single AI request can include up to 6 selected photos or PDF pages.</li>
+      <li>For voice entry, speech is converted to text on the device before the transcript is sent for AI-assisted structuring.</li>
       <li>AI results can be wrong, incomplete, or misread.</li>
       <li>You must review the original document and confirm every date, amount, account number, and reminder before saving.</li>
       <li>Do not upload documents you are not comfortable sending to OpenAI for AI-assisted processing.</li>
@@ -47,9 +49,9 @@
 
     <h2>Subscription and Billing</h2>
     <ul>
-      <li>Dueora Pro is a yearly auto-renewing subscription for AI-powered scanning.</li>
+      <li>Dueora Pro is a yearly auto-renewing subscription for AI-powered scanning and voice entry.</li>
       <li>The App Store product ID is <strong>dueora_pro</strong>.</li>
-      <li>Dueora Pro includes up to 500 AI scans per subscription year.</li>
+      <li>Dueora Pro includes up to 500 AI actions per subscription period. Each selected photo, each selected PDF page, and each voice due item counts as one AI action.</li>
       <li>Pricing, currency, billing, renewal, restore, cancellation, and subscription management are handled by Apple through your App Store account.</li>
       <li>Dueora checks purchase status to enable subscription access and track scan limits.</li>
     </ul>
@@ -57,6 +59,7 @@
     <h2>Permissions</h2>
     <ul>
       <li><strong>Camera</strong>: to take photos of bills, receipts and documents.</li>
+      <li><strong>Microphone and Speech Recognition</strong>: to turn spoken due item descriptions into text.</li>
       <li><strong>Photos/Files</strong>: to import images, screenshots, PDFs and attachments.</li>
       <li><strong>Notifications</strong>: to deliver due date and expiry reminders.</li>
       <li><strong>Calendar</strong> (optional): when you choose to add a saved item to iPhone Calendar.</li>

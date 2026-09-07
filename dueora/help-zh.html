@@ -31,9 +31,11 @@
 
     <h3>1）扫描文档</h3>
     <ul>
-      <li>点击加号，可以拍照、选择照片，或上传 PDF/文档。</li>
-      <li>当你使用 AI 扫描时，所选图片或 PDF 单页会被发送到 OpenAI 进行 AI 辅助提取。</li>
-      <li>如果 PDF 超过一页，Dueora 会让你选择其中一页，一次只扫描一页。</li>
+      <li>点击加号，可以拍一张或多张照片、选择一张或多张照片、说出一个 due item，或上传文件/PDF。</li>
+      <li>单次 AI 请求最多可包含 6 张选择的照片或 PDF 页面。</li>
+      <li>当你使用 AI 扫描时，所选图片或 PDF 页面会被发送到 OpenAI 进行 AI 辅助提取。</li>
+      <li>使用语音添加时，语音会先在设备上转换成文字，然后文字 transcript 会发送到 OpenAI，用于结构化生成一个提醒。</li>
+      <li>如果 PDF 超过一页，Dueora 会让你选择需要扫描的页面。</li>
       <li>AI 提取完成后，需要对照原始文件检查所有字段再保存。</li>
       <li>如果 Dueora 没有找到 due date 或 expiry date，需要你手动输入日期后再保存。</li>
     </ul>
@@ -71,7 +73,7 @@
       <li>Dueora Pro 是用于 AI 扫描功能的年度订阅。</li>
       <li>App Store 产品 ID 是 <strong>dueora_pro</strong>。</li>
       <li>价格、币种、续费时间与计费规则由 Apple 处理，并以 App Store 购买弹窗显示为准。</li>
-      <li>Dueora Pro 每个订阅年度最多支持 500 次 AI 扫描。</li>
+      <li>Dueora Pro 每个订阅周期最多支持 500 次 AI action。每张选择的照片、每个 PDF 选择页、或每条语音 due item 都按 1 次 AI action 计算。</li>
       <li>同一 Apple ID 下的有效订阅可以通过 Restore 恢复。</li>
       <li>订阅管理和取消请在 Apple 账户订阅设置中完成。</li>
     </ul>
@@ -89,7 +91,7 @@
       <li>设备型号和 iOS 版本。</li>
       <li>Dueora app 版本号和构建号。</li>
       <li>实际发生的问题和你期望的结果。</li>
-      <li>相关截图、错误信息，以及问题发生在拍照、PDF、手动添加、导入、通知、购买还是恢复订阅阶段。</li>
+      <li>相关截图、错误信息，以及问题发生在拍照、PDF、语音添加、手动添加、导入、通知、购买还是恢复订阅阶段。</li>
     </ul>
 
     <h2>开发者</h2>
