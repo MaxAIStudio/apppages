@@ -15,7 +15,7 @@
   </head>
   <body>
     <h1>UnisonDay Privacy Policy</h1>
-    <p class="muted">Last updated: September 12, 2026</p>
+    <p class="muted">Last updated: September 13, 2026</p>
 
     <p>
       UnisonDay is developed by MAX AI Studio. UnisonDay shows everyone in the
@@ -36,9 +36,10 @@
     <p>
       On first launch, UnisonDay generates a random identifier and stores it
       on your device. It is not linked to your name, Apple ID, or any other
-      personal information. It is used only so our server can count how many
+      personal information. It helps our server count how many
       distinct devices opened today's card without counting the same device
-      twice, and to show your country's participation on the World tab.
+      twice, show your country's participation on the World tab, and avoid
+      counting repeated reactions to the same daily card.
     </p>
 
     <h2>What Our Server Receives</h2>
@@ -68,7 +69,39 @@
       your country, using the same anonymous identifier described above.
     </p>
 
-    <h2>Content</h2>
+    <h2>Personal Notes and Public Links</h2>
+    <p>
+      Optional personal notes are rendered into the shared image on your device.
+      Notes are not sent to MaxAIStudio, stored in our database, included in
+      public links, or recorded in analytics. The draft is discarded when the
+      sharing panel closes. Temporary image files are removed after sharing
+      where possible. The app you choose to share with receives the image and
+      handles it under its own privacy policy.
+    </p>
+    <p>
+      A shared public link shows only the original card for that date, without
+      your note or a sender identifier. Opening that webpage makes a normal web
+      request to MaxAIStudio; it does not identify who originally shared it.
+    </p>
+
+    <h2>Shared Feelings</h2>
+    <p>
+      Reactions are optional. When you submit one, the server receives the card
+      date, card identifier, chosen reaction, and install identifier. The reaction
+      table stores a date-specific keyed hash of the install identifier, rather
+      than the original identifier, so repeated submissions update one choice.
+      Only aggregate counts are publicly available; individual reaction records
+      are not exposed. These records are pseudonymous, not fully anonymous, and
+      are retained to maintain totals and allow you to change your choice.
+    </p>
+    <p>
+      To limit excessive submissions, the server also uses short-lived keyed
+      network-address hashes and request counters. Expired limit records are
+      removed during subsequent submissions. Your confirmed choice is saved
+      locally so the app can display it when you return.
+    </p>
+
+    <h2>Daily Content</h2>
     <p>
       The daily card's text and background image are prepared in advance by
       MAX AI Studio and delivered through the MaxAIStudio API, with a bundled
