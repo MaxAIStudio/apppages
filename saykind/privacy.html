@@ -31,11 +31,12 @@
     <p>
       The moments you describe, the message options generated for them, the
       message you choose, any card image you save (the finished picture with
-      your words on it), and app settings such as your language are stored only
-      on your device, in a local app database and as local image files. None of
-      this is uploaded to MAX AI Studio or synced to any account &mdash; there
-      is no SayKind account to sync to. If you delete the app, this local data
-      is deleted with it.
+      your words on it), the optional name and photo you add to your profile,
+      and app settings such as your language are stored only on your device,
+      in a local app database and as local image files. None of this is
+      uploaded to MAX AI Studio or synced to any account &mdash; there is no
+      SayKind account to sync to. If you delete the app, this local data is
+      deleted with it.
     </p>
 
     <h2>AI Message Generation</h2>
@@ -62,6 +63,17 @@
       sent to our AI service to generate your message.</li>
     </ul>
 
+    <h2>Your Name and Photo (Optional)</h2>
+    <p>
+      Settings lets you add your own name and a photo, and choose whether to
+      show them at the bottom of the cards you make. Both are stored only on
+      your device (the photo as a local image file), are never uploaded
+      anywhere, and are entirely optional &mdash; leaving them blank does not
+      limit anything else in the app. Choosing a photo uses your device's
+      photo picker; SayKind only receives the single image you select, not
+      access to your wider photo library.
+    </p>
+
     <h2>Cards and Images</h2>
     <p>
       A card is the picture you create by combining a background with your
@@ -70,9 +82,27 @@
       SayKind's own app storage and a record is added to your local library
       (the Saved tab) &mdash; this never leaves your device. When you tap
       Share, the finished image is handed to iOS's own share sheet so you can
-      send it through whatever app you choose (Messages, another app, or
-      saving it to Photos from there); SayKind itself does not upload or post
-      anything on your behalf.
+      send it through whatever app you choose. When you tap Download from a
+      saved card, the image is written directly to your device's Photos
+      library using iOS's own add-only photo permission &mdash; SayKind cannot
+      read or browse your existing photos, only add the one image you chose to
+      download. SayKind itself never uploads or posts anything on your behalf.
+    </p>
+
+    <h2>SayKind Plus (Subscription)</h2>
+    <p>
+      SayKind Plus is an optional, auto-renewing annual subscription that
+      unlocks AI message generation. Subscribing and billing are handled
+      entirely by Apple through the App Store &mdash; SayKind never sees your
+      payment details. To confirm your subscription is active and to track
+      your remaining AI generations for the year, your device sends Apple's
+      purchase receipt to our server for verification, and our server keeps a
+      randomly generated, install-specific token together with a count of how
+      many AI messages you've generated this subscription period. This token
+      is not linked to your name, Apple ID, or any other personal
+      identifying information, and cannot be used to identify you. Cards,
+      saved messages, and all other app data remain on your device regardless
+      of subscription status.
     </p>
 
     <h2>What We Don't Collect</h2>
@@ -86,7 +116,10 @@
     <p>
       Local app data remains on your device until you delete individual saved
       cards, clear them from the Saved tab, or uninstall the app. There is no
-      copy of your messages or cards on our servers to retain.
+      copy of your messages or cards on our servers to retain. Subscription
+      verification tokens and AI usage counters are retained only for as long
+      as needed to enforce your subscription's annual allowance and are not
+      linked to any personal data.
     </p>
 
     <h2>Children's Privacy</h2>
