@@ -81,10 +81,10 @@
 
     <h3>6) Plans and Monthly Subscription</h3>
     <ul>
-      <li>Each device currently includes <strong>5 lifetime free AI scans</strong> shared by <strong>Scan Sign</strong> and <strong>Scan Ticket</strong>.</li>
+      <li>Each device currently includes <strong><span data-pt-free>5</span> lifetime free AI scans</strong> shared by <strong>Scan Sign</strong> and <strong>Scan Ticket</strong>.</li>
       <li>After the free scans are used, continued AI scan access requires the <strong>Monthly</strong> subscription.</li>
       <li><strong>Monthly</strong> is currently <strong>AUD $4.99 / month</strong> in Australia.</li>
-      <li>The current fair use protection for Monthly is up to <strong>150 AI scans per month</strong>.</li>
+      <li>The current fair use protection for Monthly is up to <strong><span data-pt-monthly>150</span> AI scans per month</strong>.</li>
       <li>Payments, renewals, and billing are handled by Apple through your App Store account.</li>
       <li>If Monthly access does not update after purchase, open the pricing page and try <strong>Restore Monthly</strong>.</li>
     </ul>
@@ -121,5 +121,13 @@
     <p>MAX AI Studio</p>
 
     <p><a href="./privacy.html">View Privacy Policy</a> | <a href="./support-zh.html">中文支持页</a></p>
-  </body>
+  <script>
+/* Limits are served by the backend so these pages never need editing. */
+fetch("https://maxaistudio.com/api/parktimer/config").then(function(r){return r.json();}).then(function(c){
+  if(!c||!c.ok)return;
+  document.querySelectorAll("[data-pt-free]").forEach(function(e){e.textContent=c.freeLifetimeLimit;});
+  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){e.textContent=c.monthlyLimit;});
+}).catch(function(){});
+</script>
+</body>
   </html>

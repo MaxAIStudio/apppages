@@ -58,7 +58,7 @@
     <h2>应用内购买</h2>
     <p>
       ParkTimer 当前为每台设备提供
-      <strong>终身免费 5 次 AI 扫描</strong>，适用于
+      <strong>终身免费 <span data-pt-free>5</span> 次 AI 扫描</strong>，适用于
       <strong>Scan Sign</strong> 和 <strong>Scan Ticket</strong>。
       免费次数用完后，如需继续使用 AI 扫描，需要开通
       <strong>月付订阅</strong>。
@@ -66,7 +66,7 @@
 
     <p>
       月付方案面向正常个人使用，并受合理使用限制保护；当前上限为
-      <strong>每月最多 150 次 AI 扫描</strong>。付款、续费和账单均由
+      <strong>每月最多 <span data-pt-monthly>150</span> 次 AI 扫描</strong>。付款、续费和账单均由
       Apple 通过你的 App Store 账户处理。
     </p>
 
@@ -114,5 +114,13 @@
     </p>
 
     <p><a href="./support-zh.html">支持页面</a> | <a href="./privacy.html">English Privacy Policy</a></p>
-  </body>
+  <script>
+/* Limits are served by the backend so these pages never need editing. */
+fetch("https://maxaistudio.com/api/parktimer/config").then(function(r){return r.json();}).then(function(c){
+  if(!c||!c.ok)return;
+  document.querySelectorAll("[data-pt-free]").forEach(function(e){e.textContent=c.freeLifetimeLimit;});
+  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){e.textContent=c.monthlyLimit;});
+}).catch(function(){});
+</script>
+</body>
 </html>

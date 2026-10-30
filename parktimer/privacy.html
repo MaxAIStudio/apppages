@@ -64,7 +64,7 @@
 
     <h2>In-App Purchases</h2>
     <p>
-      ParkTimer currently includes <strong>5 lifetime free AI scans per
+      ParkTimer currently includes <strong><span data-pt-free>5</span> lifetime free AI scans per
       device</strong> for <strong>Scan Sign</strong> and
       <strong>Scan Ticket</strong>. After those free scans are used,
       continued AI scan access requires a <strong>Monthly</strong>
@@ -73,7 +73,7 @@
 
     <p>
       Monthly access is intended for normal personal use and is protected by a
-      fair use cap, currently up to <strong>150 AI scans per month</strong>.
+      fair use cap, currently up to <strong><span data-pt-monthly>150</span> AI scans per month</strong>.
       Payments, renewals, and billing are processed by Apple through your App
       Store account.
     </p>
@@ -128,5 +128,13 @@
     </p>
 
     <p><a href="./support.html">Support</a> | <a href="./privacy-zh.html">中文隐私政策</a></p>
-  </body>
+  <script>
+/* Limits are served by the backend so these pages never need editing. */
+fetch("https://maxaistudio.com/api/parktimer/config").then(function(r){return r.json();}).then(function(c){
+  if(!c||!c.ok)return;
+  document.querySelectorAll("[data-pt-free]").forEach(function(e){e.textContent=c.freeLifetimeLimit;});
+  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){e.textContent=c.monthlyLimit;});
+}).catch(function(){});
+</script>
+</body>
   </html>
