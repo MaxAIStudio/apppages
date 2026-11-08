@@ -14,13 +14,14 @@
   </head>
   <body>
     <h1>WishTune Privacy Policy</h1>
-    <p class="muted">Last updated: November 1, 2026</p>
+    <p class="muted">Last updated: November 8, 2026</p>
 
     <p>
       WishTune is designed to let you create greeting videos, song videos, generated songs, and related
       media without creating an account and without us building a profile about you. We do not sell your
       data, we do not run third-party advertising trackers, and we do not maintain a normal user database
-      of your personal creative content.
+      of your personal creative content. The one exception is Group Card, described in section 5, which keeps
+      the pages people add on our server for a limited time.
     </p>
 
     <h2>1. What We Collect</h2>
@@ -28,7 +29,7 @@
       We do not collect or store personal user data on our own servers as part of normal app use.
       Your project content, names, blessing text, lyrics, voice recordings, selected photos, generated images,
       background music, and generated files are intended to remain on your device unless you choose an action
-      that requires external processing.
+      that requires external processing. Group Card is the exception: see section 5.
     </p>
 
     <h2>2. Local-Only Content</h2>
@@ -46,6 +47,7 @@
       <li><strong>AI features:</strong> if you choose AI text, AI image, or song generation features, the prompt content needed for that request is sent for processing so a result can be returned to the app.</li>
       <li><strong>In-App Purchase:</strong> Apple processes payment and purchase validation for premium features.</li>
       <li><strong>Quick Card QR code:</strong> cards and videos made with Quick Card may show a small QR code that opens WishTune's App Store page when scanned. The code contains only that link, not your names, message or photos.</li>
+      <li><strong>Group Card:</strong> if you start a Group Card, the card's details and the pages you and your friends write are stored on our server so everyone can add a page from a link. See section 5.</li>
       <li><strong>Sharing:</strong> when you choose to share a file, the file is sent through the sharing method or app you selected.</li>
       <li><strong>Save to Files:</strong> when you choose to save MP3 or video files through the iOS Files workflow, the destination and handling are controlled by your device and the location you selected.</li>
       <li><strong>Support email:</strong> if you email us, we receive the information you include in that email.</li>
@@ -59,52 +61,70 @@
       processing does not occur.
     </p>
 
-    <h2>5. Payments</h2>
+    <h2>5. Group Card</h2>
     <p>
-      Premium purchases, including removing the QR code and watermark from a Quick Card, are handled by Apple through In-App Purchase. We do not receive your full payment card
+      Group Card lets you collect one page from each of your friends in a single card. Unlike the rest of
+      WishTune, it needs a server, so its content is stored there for a limited time.
+    </p>
+    <ul>
+      <li><strong>What is stored:</strong> the card's occasion, the recipient's name, your name, the chosen picture and optional last day to add pages; and each page: the author's name, the message and the picture they chose. We also keep a one-way hash of the secret key that proves you started the card, and one-way hashes of the network address and device used to add a page, which we use only to limit abuse. We do not store a readable network address or device identifier with the page.</li>
+      <li><strong>Who can see it:</strong> anyone with the link can see the recipient's name, your name, the occasion, and the <em>names</em> of the people who have added a page, so they know who has joined. The <em>messages</em> are visible only to you, the person who started the card, on the phone that created it. Friends do not see each other's messages.</li>
+      <li><strong>Your control:</strong> you can hide any page, change or clear the last day to add pages, switch the link off and on, or delete the whole card and all its pages at any time. Only the phone that started the card can manage it, because the key is kept on that device.</li>
+      <li><strong>Friends' pages:</strong> a friend can change their own page for 24 hours, until the last day to add pages, using the web page they wrote it on. The web page remembers that page in the friend's own browser (local storage) so they can come back to it.</li>
+      <li><strong>Retention:</strong> a Group Card expires 30 days after it is created, and a regular clean-up deletes it from our server a further 7 days later. Deleting a card removes its pages immediately. Activity-log entries are kept for as long as we need them to run and improve the service.</li>
+      <li><strong>Activity log:</strong> we record that a card was created, opened, added to, changed, switched off or deleted, with counts and whether it worked, so we can keep the service running and fix problems. A log entry includes the occasion, the recipient's name and the name of the person who started the card, and, like any web request, the network address and the type of device or app that made it. It does not contain any page message or the names of friends who added pages.</li>
+      <li><strong>Reports:</strong> the web page has a "Report a problem" link. A report is kept with the card it concerns and its reason, so we can review it.</li>
+      <li><strong>Web page:</strong> friends write their page in a web page that loads fonts from Google Fonts, so their browser contacts Google to fetch them. The page uses no advertising or analytics trackers.</li>
+    </ul>
+
+    <h2>6. Payments</h2>
+    <p>
+      Premium purchases, including removing the QR code and watermark from a Quick Card or a Group Card, are handled by Apple through In-App Purchase. We do not receive your full payment card
       details. Apple may provide purchase status or transaction information needed to unlock or restore premium access.
     </p>
 
-    <h2>6. No Advertising or Sale of Data</h2>
+    <h2>7. No Advertising or Sale of Data</h2>
     <p>
       We do not sell personal data. We do not use third-party advertising SDKs to track you across apps or websites.
     </p>
 
-    <h2>7. Data Retention</h2>
+    <h2>8. Data Retention</h2>
     <p>
       Because most content stays on your device, you control how long it remains there. You can delete local files,
       saved projects, recordings, generated songs, MP3 files, and exports at any time from your device or by
       uninstalling the app.
+      Group Card content is the exception and follows the schedule in section 5.
       If you send a support email, we may keep that correspondence as needed to respond to you.
     </p>
 
-    <h2>8. Your Choices</h2>
+    <h2>9. Your Choices</h2>
     <ul>
       <li>You can use the app without creating an account.</li>
       <li>You can choose not to use AI features.</li>
       <li>You can choose not to record voice or upload photos.</li>
+      <li>You can choose not to use Group Card, and if you do, hide pages, switch the link off or delete the card at any time.</li>
       <li>You can choose whether or not to save or share generated files.</li>
       <li>You can choose whether or not to use Save to Files for MP3 or video downloads.</li>
     </ul>
 
-    <h2>9. Children’s Privacy</h2>
+    <h2>10. Children’s Privacy</h2>
     <p>
       WishTune is not directed to children under 13. If you believe a child has sent us personal information
       through support email or another direct contact method, please contact us and we will address it.
     </p>
 
-    <h2>10. Changes to This Policy</h2>
+    <h2>11. Changes to This Policy</h2>
     <p>
       We may update this Privacy Policy from time to time. When we do, we will update the date at the top of this page.
     </p>
 
-    <h2>11. Contact</h2>
+    <h2>12. Contact</h2>
     <p>
       For privacy questions, contact:
       <a href="mailto:maxadlaistudio@gmail.com">maxadlaistudio@gmail.com</a>
     </p>
 
-    <h2>12. Additional Legal Links</h2>
+    <h2>13. Additional Legal Links</h2>
     <p>
       Terms of Use (Apple Standard EULA):
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
