@@ -38,7 +38,7 @@
       <li><strong>Scan Ticket</strong>：拍摄停车票，并读取到期信息。</li>
       <li><strong>Set Timer</strong>：不使用 AI，直接手动创建停车提醒。</li>
       <li><strong>Park History</strong>：查看历史停车记录和保存的位置。</li>
-      <li><strong>Plans &amp; Pricing</strong>：查看 AI 扫描访问状态、月付订阅状态和恢复月付。</li>
+      <li><strong>Plans &amp; Pricing</strong>：查看 AI 扫描访问状态、订阅状态和恢复购买。</li>
     </ul>
 
     <h3>2）AI 扫描结果不正确或不完整</h3>
@@ -77,14 +77,14 @@
       <li>模拟器上的通知行为可能不一致，建议在真机上验证。</li>
     </ul>
 
-    <h3>6）套餐与月付订阅</h3>
+    <h3>6）套餐与订阅</h3>
     <ul>
       <li>每台设备当前提供 <strong>终身免费 <span data-pt-free>5</span> 次 AI 扫描</strong>，由 <strong>Scan Sign</strong> 和 <strong>Scan Ticket</strong> 共用。</li>
-      <li>免费次数用完后，如需继续使用 AI 扫描，需要开通 <strong>月付订阅</strong>。</li>
-      <li><strong>月付</strong> 当前在澳大利亚为 <strong>AUD $4.99 / month</strong>。</li>
-      <li>当前月付合理使用保护上限为 <strong>每月最多 <span data-pt-monthly>150</span> 次 AI 扫描</strong>。</li>
+      <li>免费次数用完后，如需继续使用 AI 扫描，需要订阅：<strong>年付</strong>(推荐)或<strong>月付</strong>。</li>
+      <li>各套餐价格会在订阅前于 App Store 中显示，付款与续费由 Apple 处理。</li>
+      <li>当前合理使用保护上限：年付 <strong>每个订阅年最多 <span data-pt-yearly>600</span> 次 AI 扫描</strong>，月付 <strong>每月最多 <span data-pt-monthly>150</span> 次 AI 扫描</strong>。</li>
       <li>付款、续费和账单均由 Apple 通过你的 App Store 账户处理。</li>
-      <li>如果月付购买后权限未更新，请打开资费页面并尝试 <strong>Restore Monthly</strong>。</li>
+      <li>如果购买后权限未更新，请打开资费页面并尝试 <strong>恢复购买</strong>。</li>
     </ul>
 
     <h3>7）设置总览</h3>
@@ -92,7 +92,7 @@
       <li><strong>Language</strong>：切换英文/中文。</li>
       <li><strong>App color</strong>：切换应用主色。</li>
       <li><strong>Save photos to Photos</strong>：将停车照片保存到系统相册。</li>
-      <li><strong>Plans &amp; Pricing</strong>：查看月付状态、资费信息和恢复月付。</li>
+      <li><strong>Plans &amp; Pricing</strong>：查看订阅状态、资费信息和恢复购买。</li>
       <li><strong>Advanced</strong>：开启后显示应用级高级选项。</li>
       <li><strong>Help</strong>：关于、免责声明、免责声明同意状态、支持邮箱。</li>
     </ul>
@@ -123,7 +123,8 @@
 fetch("https://maxaistudio.com/api/parktimer/config").then(function(r){return r.json();}).then(function(c){
   if(!c||!c.ok)return;
   document.querySelectorAll("[data-pt-free]").forEach(function(e){e.textContent=c.freeLifetimeLimit;});
-  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){e.textContent=c.monthlyLimit;});
+  document.querySelectorAll("[data-pt-yearly]").forEach(function(e){if(c.yearlyLimit!=null)e.textContent=c.yearlyLimit;});
+  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){if(c.monthlyLimit!=null)e.textContent=c.monthlyLimit;});
 }).catch(function(){});
 </script>
 </body>

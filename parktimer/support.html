@@ -38,7 +38,7 @@
       <li><strong>Scan Ticket</strong>: take a photo of a parking ticket and let ParkTimer read the expiry details.</li>
       <li><strong>Set Timer</strong>: create a parking reminder manually without AI.</li>
       <li><strong>Park History</strong>: view previous parking sessions and saved locations.</li>
-      <li><strong>Plans &amp; Pricing</strong>: view AI scan access, Monthly subscription status, and restore Monthly purchases.</li>
+      <li><strong>Plans &amp; Pricing</strong>: view AI scan access, subscription status, and restore purchases.</li>
     </ul>
 
     <h3>2) AI Scan Results Look Wrong or Incomplete</h3>
@@ -79,14 +79,14 @@
       <li>On simulator, notification behavior may differ. Please verify on a real iPhone.</li>
     </ul>
 
-    <h3>6) Plans and Monthly Subscription</h3>
+    <h3>6) Plans and Subscriptions</h3>
     <ul>
       <li>Each device currently includes <strong><span data-pt-free>5</span> lifetime free AI scans</strong> shared by <strong>Scan Sign</strong> and <strong>Scan Ticket</strong>.</li>
-      <li>After the free scans are used, continued AI scan access requires the <strong>Monthly</strong> subscription.</li>
-      <li><strong>Monthly</strong> is currently <strong>AUD $4.99 / month</strong> in Australia.</li>
-      <li>The current fair use protection for Monthly is up to <strong><span data-pt-monthly>150</span> AI scans per month</strong>.</li>
+      <li>After the free scans are used, continued AI scan access requires a subscription: <strong>Yearly</strong> (recommended) or <strong>Monthly</strong>.</li>
+      <li>Plan prices are shown in the App Store before you subscribe. Payments and renewals are handled by Apple.</li>
+      <li>The current fair use protection is up to <strong><span data-pt-yearly>600</span> AI scans per subscription year</strong> on Yearly, or <strong><span data-pt-monthly>150</span> AI scans per month</strong> on Monthly.</li>
       <li>Payments, renewals, and billing are handled by Apple through your App Store account.</li>
-      <li>If Monthly access does not update after purchase, open the pricing page and try <strong>Restore Monthly</strong>.</li>
+      <li>If access does not update after purchase, open the pricing page and try <strong>Restore Purchases</strong>.</li>
     </ul>
 
     <h3>7) Settings Overview</h3>
@@ -94,7 +94,7 @@
       <li><strong>Language</strong>: switch between English and Chinese.</li>
       <li><strong>App color</strong>: change the primary app accent color.</li>
       <li><strong>Save photos to Photos</strong>: keep a copy of parking photos in iOS Photos.</li>
-      <li><strong>Plans &amp; Pricing</strong>: view Monthly access, check status, and restore Monthly.</li>
+      <li><strong>Plans &amp; Pricing</strong>: view your plan, check status, and restore purchases.</li>
       <li><strong>Advanced</strong>: app-level advanced options when enabled.</li>
       <li><strong>Help</strong>: About, Disclaimer, Disclaimer agreement status, Support email.</li>
     </ul>
@@ -126,7 +126,8 @@
 fetch("https://maxaistudio.com/api/parktimer/config").then(function(r){return r.json();}).then(function(c){
   if(!c||!c.ok)return;
   document.querySelectorAll("[data-pt-free]").forEach(function(e){e.textContent=c.freeLifetimeLimit;});
-  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){e.textContent=c.monthlyLimit;});
+  document.querySelectorAll("[data-pt-yearly]").forEach(function(e){if(c.yearlyLimit!=null)e.textContent=c.yearlyLimit;});
+  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){if(c.monthlyLimit!=null)e.textContent=c.monthlyLimit;});
 }).catch(function(){});
 </script>
 </body>

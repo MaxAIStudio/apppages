@@ -60,13 +60,13 @@
       ParkTimer 当前为每台设备提供
       <strong>终身免费 <span data-pt-free>5</span> 次 AI 扫描</strong>，适用于
       <strong>Scan Sign</strong> 和 <strong>Scan Ticket</strong>。
-      免费次数用完后，如需继续使用 AI 扫描，需要开通
-      <strong>月付订阅</strong>。
+      免费次数用完后，如需继续使用 AI 扫描，需要订阅
+      （推荐<strong>年付</strong>，也可选<strong>月付</strong>）。
     </p>
 
     <p>
-      月付方案面向正常个人使用，并受合理使用限制保护；当前上限为
-      <strong>每月最多 <span data-pt-monthly>150</span> 次 AI 扫描</strong>。付款、续费和账单均由
+      订阅方案面向正常个人使用，并受合理使用限制保护；当前上限为年付
+      <strong>每个订阅年最多 <span data-pt-yearly>600</span> 次 AI 扫描</strong>，月付 <strong>每月最多 <span data-pt-monthly>150</span> 次 AI 扫描</strong>。付款、续费和账单均由
       Apple 通过你的 App Store 账户处理。
     </p>
 
@@ -118,7 +118,8 @@
 fetch("https://maxaistudio.com/api/parktimer/config").then(function(r){return r.json();}).then(function(c){
   if(!c||!c.ok)return;
   document.querySelectorAll("[data-pt-free]").forEach(function(e){e.textContent=c.freeLifetimeLimit;});
-  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){e.textContent=c.monthlyLimit;});
+  document.querySelectorAll("[data-pt-yearly]").forEach(function(e){if(c.yearlyLimit!=null)e.textContent=c.yearlyLimit;});
+  document.querySelectorAll("[data-pt-monthly]").forEach(function(e){if(c.monthlyLimit!=null)e.textContent=c.monthlyLimit;});
 }).catch(function(){});
 </script>
 </body>
