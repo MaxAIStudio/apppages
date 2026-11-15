@@ -14,14 +14,14 @@
   </head>
   <body>
     <h1>WishTune Privacy Policy</h1>
-    <p class="muted">Last updated: November 8, 2026</p>
+    <p class="muted">Last updated: November 15, 2026</p>
 
     <p>
       WishTune is designed to let you create greeting videos, song videos, generated songs, and related
       media without creating an account and without us building a profile about you. We do not sell your
       data, we do not run third-party advertising trackers, and we do not maintain a normal user database
-      of your personal creative content. The one exception is Group Card, described in section 5, which keeps
-      the pages people add on our server for a limited time.
+      of your personal creative content. The exceptions are Group Card and Invitation Card, described in sections 5 and 6, which keep
+      the pages people add, or the invitation and its replies, on our server for a limited time.
     </p>
 
     <h2>1. What We Collect</h2>
@@ -29,7 +29,7 @@
       We do not collect or store personal user data on our own servers as part of normal app use.
       Your project content, names, blessing text, lyrics, voice recordings, selected photos, generated images,
       background music, and generated files are intended to remain on your device unless you choose an action
-      that requires external processing. Group Card is the exception: see section 5.
+      that requires external processing. Group Card and Invitation Card are the exceptions: see sections 5 and 6.
     </p>
 
     <h2>2. Local-Only Content</h2>
@@ -48,6 +48,8 @@
       <li><strong>In-App Purchase:</strong> Apple processes payment and purchase validation for premium features.</li>
       <li><strong>Quick Card QR code:</strong> cards and videos made with Quick Card may show a small QR code that opens WishTune's App Store page when scanned. The code contains only that link, not your names, message or photos.</li>
       <li><strong>Group Card:</strong> if you start a Group Card, the card's details and the pages you and your friends write are stored on our server so everyone can add a page from a link. See section 5.</li>
+      <li><strong>Invitation Card:</strong> if you make an invitation, its details, its picture and your friends' replies are stored on our server so friends can open the link and reply. See section 6.</li>
+      <li><strong>Place suggestions:</strong> while you type a place for an invitation, the text you typed is sent to Apple Maps search so it can suggest addresses. Apple handles it under its own privacy policy; we do not receive it.</li>
       <li><strong>Sharing:</strong> when you choose to share a file, the file is sent through the sharing method or app you selected.</li>
       <li><strong>Save to Files:</strong> when you choose to save MP3 or video files through the iOS Files workflow, the destination and handling are controlled by your device and the location you selected.</li>
       <li><strong>Support email:</strong> if you email us, we receive the information you include in that email.</li>
@@ -77,54 +79,68 @@
       <li><strong>Web page:</strong> friends write their page in a web page that loads fonts from Google Fonts, so their browser contacts Google to fetch them. The page uses no advertising or analytics trackers.</li>
     </ul>
 
-    <h2>6. Payments</h2>
+    <h2>6. Invitation Card</h2>
     <p>
-      Premium purchases, including removing the QR code and watermark from a Quick Card or a Group Card, are handled by Apple through In-App Purchase. We do not receive your full payment card
+      Invitation Card makes a picture invitation with a link; friends reply Going, Maybe or Can't go and how many people. It needs a server, so the invitation and the replies are stored there for a limited time.
+    </p>
+    <ul>
+      <li><strong>What is stored:</strong> the event name, your name, an optional contact number, the date, start and end time and your time zone, an optional reply-by day, the place, optional details, the scene, whether the picture carries the WishTune watermark, and the invitation picture (a picture the app drew; if you chose your own photo as the background, that photo is part of the picture). For each reply: the guest's name, their answer, how many people and an optional note. We also keep a one-way hash of the secret key that proves you made the invitation, and one-way hashes of the network address and device used to open or reply, which we use only to limit abuse, to allow one reply per device and to count how many devices opened the link. We do not store a readable network address or device identifier with a reply.</li>
+      <li><strong>Who can see it:</strong> anyone with the link can see the invitation picture and its details, including your name, the contact number if you added one, the place and the details text. The <em>replies</em> (names, answers, numbers and notes) are visible only to you, on the phone that made the invitation. Friends do not see each other's replies. You see how many devices opened the link and how many of them have not replied, as numbers only.</li>
+      <li><strong>Your control:</strong> you can edit the invitation, stop or reopen replies, or delete the invitation and all its replies at any time. Only the phone that made the invitation can manage it, because the key is kept on that device.</li>
+      <li><strong>Friends' replies:</strong> a friend can change their reply until the event is over or you stop replies, using the web page they replied on. The web page remembers that reply in the friend's own browser (local storage) so they can come back to it.</li>
+      <li><strong>Retention:</strong> an invitation expires 7 days after the event starts (never sooner than 2 days after it was made), and a regular clean-up deletes it from our server a further 7 days later. Deleting an invitation removes its picture and replies immediately.</li>
+      <li><strong>Web page:</strong> the page friends open uses no advertising or analytics trackers.</li>
+    </ul>
+
+    <h2>7. Payments</h2>
+    <p>
+      Premium purchases, including removing the QR code and watermark from a Quick Card, a Group Card or an Invitation Card, are handled by Apple through In-App Purchase. We do not receive your full payment card
       details. Apple may provide purchase status or transaction information needed to unlock or restore premium access.
     </p>
 
-    <h2>7. No Advertising or Sale of Data</h2>
+    <h2>8. No Advertising or Sale of Data</h2>
     <p>
       We do not sell personal data. We do not use third-party advertising SDKs to track you across apps or websites.
     </p>
 
-    <h2>8. Data Retention</h2>
+    <h2>9. Data Retention</h2>
     <p>
       Because most content stays on your device, you control how long it remains there. You can delete local files,
       saved projects, recordings, generated songs, MP3 files, and exports at any time from your device or by
       uninstalling the app.
-      Group Card content is the exception and follows the schedule in section 5.
+      Group Card and Invitation Card content is the exception and follows the schedules in sections 5 and 6.
       If you send a support email, we may keep that correspondence as needed to respond to you.
     </p>
 
-    <h2>9. Your Choices</h2>
+    <h2>10. Your Choices</h2>
     <ul>
       <li>You can use the app without creating an account.</li>
       <li>You can choose not to use AI features.</li>
       <li>You can choose not to record voice or upload photos.</li>
       <li>You can choose not to use Group Card, and if you do, hide pages, switch the link off or delete the card at any time.</li>
+      <li>You can choose not to use Invitation Card, and if you do, edit it, stop replies or delete the invitation and its replies at any time. A contact number is optional.</li>
       <li>You can choose whether or not to save or share generated files.</li>
       <li>You can choose whether or not to use Save to Files for MP3 or video downloads.</li>
     </ul>
 
-    <h2>10. Children’s Privacy</h2>
+    <h2>11. Children’s Privacy</h2>
     <p>
       WishTune is not directed to children under 13. If you believe a child has sent us personal information
       through support email or another direct contact method, please contact us and we will address it.
     </p>
 
-    <h2>11. Changes to This Policy</h2>
+    <h2>12. Changes to This Policy</h2>
     <p>
       We may update this Privacy Policy from time to time. When we do, we will update the date at the top of this page.
     </p>
 
-    <h2>12. Contact</h2>
+    <h2>13. Contact</h2>
     <p>
       For privacy questions, contact:
-      <a href="mailto:maxadlaistudio@gmail.com">maxadlaistudio@gmail.com</a>
+      <a href="mailto:support@maxaistudio.com">support@maxaistudio.com</a>
     </p>
 
-    <h2>13. Additional Legal Links</h2>
+    <h2>14. Additional Legal Links</h2>
     <p>
       Terms of Use (Apple Standard EULA):
       <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener noreferrer">
